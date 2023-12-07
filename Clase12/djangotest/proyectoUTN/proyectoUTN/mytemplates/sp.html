@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo personalizado</title>
+</head>
+<body>
+    <h1>Hola {{nombre}} {{apellido}}, el año en que naciste es: {{anio}} </h1>
+
+    <h2>Estos son los lenguajes que "sabe" Rodrigo</h2>
+    {% if lenguajes %}
+        <ul>
+            {% for lenguaje in lenguajes %}
+           
+
+                <li> {{lenguaje}} </li>
+
+            {% endfor %}
+        </ul>
+    {% else %} 
+        <p> Esta persona no sabe lenguajes de programación</p>
+    {% endif %}
+
+
+
+
+
+    
+</body>
+</html>
