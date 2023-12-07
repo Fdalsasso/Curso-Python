@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock %}  </title>
+</head>
+<body>
+    {% include "menu.html" %}
+     <h1>Bienvenidos a Django</h1>
+
+     {% block content %} 
+     {% endblock %}
+
+
+
+    <footer>
+
+        Estas son las redes sociales de la pagina: <br>
+
+        <a href="http://www.twitter.com">Twitter</a><br>
+        
+        <a href="">Facebook</a><br>
+        
+        <a href="">Instagram</a><br>
+        
+        <a href="">Tik Tok</a>
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    # https://docs.djangoproject.com/en/4.1/howto/static-files/
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    
+    <title>UTN HTML</title>
+</head>
+
+<body>
+    {% include "menu.html" %}
+    <h1>Mi primer pagina web</h1>
+    <div>
+        <form action="">
+            <fieldset>
+                <label>Nombre</label>
+                <input type="text" name="nombre">
+                <label >Apellido</label>
+                <input type="text" name="apellido">
+                <label >Email</label>
+                <input type="email" name="email">
+                <label >Password</label>
+                <input type="password" name="password">
+                <label >Lenguaje preferido</label>
+                <select name="lenguaje" >
+                        <option value="JS">JavaScript</option>
+                        <option value="PY">Python</option>
+                        <option value="C">C</option>
+                        <option value="JAVA">Java</option>
+                </select>
+                <h3>Tipo mascota que posee</h3>
+                <label ><input type="checkbox" name="pet" >Perro</label>
+                <label ><input type="checkbox" name="pet" >Gato</label>
+                <label ><input type="checkbox" name="pet" >Canario</label>
+
+                <img src="{% static 'img\beagle.jpg' %} ">
+
+                <h3>¿Es usted argentino/a?</h3>
+                <label ><input type="radio" name="pet" >Si</label>
+                <label ><input type="radio" name="pet" >No</label>
+               
+                
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+            
+            
+            
+            </fieldset>
+        </form>
+    </div>    
+<footer>
+    
+</footer>
+</body>
+
+</html>
+
+
+
