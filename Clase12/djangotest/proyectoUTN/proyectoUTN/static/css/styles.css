@@ -1,0 +1,14 @@
+h1{
+    color:red;
+    border: 2px solid green;
+}
+.main-news{
+    border: 1px solid blue;
+    background-color: aquamarine;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+}
+/*esto es un comentario*/
