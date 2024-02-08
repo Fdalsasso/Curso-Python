@@ -1,4 +1,4 @@
-# Curso-Python
+# Curso-Python/Python-Course
 
 ## Estas son las clases de un curso de Python financiado por CapGemini e instruidas por un profesor de UTN FRBA. Aqui encontraran problemas de Python y MySQL, ademas del proyecto integrador.
 
