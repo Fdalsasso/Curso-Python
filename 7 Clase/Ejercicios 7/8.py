@@ -1,1 +1,0 @@
-# 8. Escriba un programa Python para calcular el número de días entre dos fechas.

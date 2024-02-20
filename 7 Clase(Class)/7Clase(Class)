@@ -1,0 +1,83 @@
+import time
+from datetime import datetime, timedelta, date
+
+# Escriba una secuencia de comandos de Python para mostrar los distintos formatos de fecha y hora:
+# a) Fecha y hora actuales
+# b) Año actual
+# c) Mes del año
+# d) Número de semana del año
+# e) Día de la semana
+# f) Día de año
+# g) Día del mes
+# h) Día de la semana
+
+# Write a Python script to display the various date and time formats:
+# a) Current date and time
+# b) Current year
+# c) Month of the year
+# d) Week number of the year
+# e) Day of the week
+# f) Day of the year
+# g) Day of the month
+# h) Day of the week
+
+#a = datetime.now()    |     time.asctime()
+#b = datetime.today().strftime("%Y")    |     time.localtime()[0]
+#c = datetime.today().strftime("%B")    |     time.localtime()[1]
+#d = datetime.today().strftime("%U")    |     time.strftime("%U")
+#e = datetime.today().strftime("%A")    |     time.strftime("%A")
+#f = datetime.today().strftime("%j")    |     time.strftime("%j")
+#g = datetime.today().strftime("%d")    |     time.strftime("%d")
+#h = datetime.today().strftime("%a")    |     time.strftime("%a")
+
+# Crear una función que determine si un año es bisiesto o no
+# Create a function that determines if a year is a leap year or not
+
+def bisiesto(anio):
+    if anio % 400 == 0 or (anio % 4 == 0 and anio % 100 != 0):
+        print("Es bisiesto")
+    else:
+        print("No es bisiesto")
+
+anio = int(input("Ingrese un anio: "))
+bisiesto(anio)
+
+# Escriba una función en Python para obtener la hora actual en Python.
+# Write a function in Python to get the current time in Python.
+
+print(time.strftime("%X"))
+
+# Escriba una función en Python para restar/sumar X días de la fecha actual.
+# Write a function in Python to subtract/add X days from the current date.
+
+now = datetime.now()
+
+opcion = input("Ingrese sumar o restar\n")
+valor = timedelta(int(input("Ingrese la cantidad de dias\n")))
+
+if opcion.upper() == "SUMAR":
+    now += valor
+elif opcion.upper() == "RESTAR":
+    now-= valor
+else:
+    print("Operacion invalida")
+
+print(now)
+
+# Escriba un programa en Python para obtener el número de semana.
+# Write a program in Python to get the week number.
+
+anio = int(input("Ingrese un anio\n"))
+mes = int(input("Ingrese un mes\n"))
+dia = int(input("Ingrese un dia\n"))
+
+print(date(anio, mes, dia).strftime("%U"))
+
+# Dada la fecha de nacimiento de una persona calcular la cantidad de años que tiene
+# Given the date of birth of a person, calculate the number of years he or she is.
+
+var = date(2001, 11, 28)
+
+var = date.today() - timedelta(var)
+
+print(var)

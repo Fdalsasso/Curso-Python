@@ -1,0 +1,264 @@
+from cmath import pi
+
+# Cree una clase de Python llamada BankAccount que represente una cuenta bancaria,
+# que tenga como atributos: número de cuenta (tipo numérico), nombre (nombre del
+# propietario de la cuenta como tipo de cadena), saldo.
+# Cree un constructor con parámetros: número de cuenta, nombre, saldo.
+# Cree un método deposito() que gestione las acciones de depósito.
+# Cree un método de retiro() que administre las acciones de retiro.
+# Cree un método comisionBancaria() para aplicar las tarifas bancarias con un porcentaje del
+# 5% del saldo de la cuenta.
+# Cree un método display() para mostrar los detalles de la cuenta.
+
+# Create a Python class called BankAccount that represents a bank account,
+# that has as attributes: account number (numeric type), name (name of the
+# account owner as string type), balance.
+# Create a constructor with parameters: account number, name, balance.
+# Create a deposit() method that handles deposit actions.
+# Create a withdraw() method that handles withdrawal actions.
+# Create a BankCommission() method to apply bank fees with a percentage of the
+# 5% of the account balance.
+# Create a display() method to display the account details.
+
+class BankAccount():
+    
+    def __init__(self, numeroDeCuenta, nombre, saldo):
+        self.numeroDeCuenta = numeroDeCuenta
+        self.nombre = nombre
+        self.saldo = saldo
+
+    def deposito(self, monto):
+        self.saldo += monto
+
+    def retiro(self, monto):
+        if monto > self.saldo:
+            print("Saldo insuficiente")
+        else:
+            self.saldo -= monto
+
+    def comisionBancaria(self):
+        self.saldo = self.saldo * 0.95
+
+    def display(self):
+        print("Cliente ", self.nombre, " su cuenta es la ", self.numeroDeCuenta, " y posee un saldo de ", self.saldo)
+
+# 1 - Defina una clase de nombre “círculo” que permita crear un círculo C (O, r) con centro O
+# (a, b) y radio r
+# 2 - Defina un método Area() de la clase que calcule el área del círculo.
+# 3 - Defina un método Perimeter() de la clase que le permita calcular el perímetro del círculo.
+# 4 - Defina un método testBelongs() de la clase que permita probar si un punto A(x, y)
+# pertenece al círculo C(O, r) o no.
+        
+# 1- Define a class named “circle” that allows creating a circle C (O, r) with center O
+# (a, b) and radius r
+# 2 - Define an Area() method of the class that calculates the area of ​​the circle.
+# 3 - Define a Perimeter() method of the class that allows you to calculate the perimeter of the circle.
+# 4 - Define a testBelongs() method of the class that allows testing if a point A(x, y)
+# belongs to the circle C(O, r) or not.
+
+class circulo():
+
+    def __init__(self, x, y, radio):
+        self.x = x
+        self.y = y
+        self.radio = radio
+
+    def area(self):
+        area = pi * self.radio ** 2
+        return area
+
+    def perimeter(self):
+        perimetro = 2 * pi * self.radio
+        return perimetro
+
+    def testBelongs(self, x, y):
+        if(x - self.x) ** 2 + (y - self.y) ** 2 <= self.radio ** 2:
+            print("Pertenece")
+        else:
+            print("No pertenece")
+
+# 1 - Crear una clase de cálculo con un constructor predeterminado (sin parámetros) que
+# permita realizar varios cálculos en números enteros.
+# 2 - Crear un método llamado Factorial() que permita calcular el factorial de un entero.
+# Pruebe el método instanciando la clase.
+# 3 - Crear un método llamado Sum() que permita calcular la suma de los primeros n enteros
+# 1 + 2 + 3 + .. + n. Pruebe este método.
+# 4 - Cree un método llamado testPrimo() en la clase calculo para probar si un numero es
+# primo o no
+# 5 - Cree un método tablaDeMultiplicar() que cree y muestre la tabla de multiplicar de un
+# entero dado. Luego cree un método tablaDeMultiplicar() para mostrar todas las tablas de
+# multiplicar de enteros 1, 2, 3, ..., 9.
+# 6 - Cree un método estático listaDivisores() que obtenga todos los divisores de un entero
+# dado en una nueva lista llamada Ldiv. Cree otro método listaDivisoresPrimos() que obtenga
+# todos los divisores primos de un entero dado.
+            
+# 1 - Create a calculation class with a default constructor (without parameters) that
+# allows you to perform various calculations on whole numbers.
+# 2 - Create a method called Factorial() that allows you to calculate the factorial of an integer.
+# Test the method by instantiating the class.
+# 3 - Create a method called Sum() that allows you to calculate the sum of the first n integers
+# 1 + 2 + 3 + .. + n. Try this method.
+# 4 - Create a method called testPrimo() in the calculation class to test if a number is
+# cousin or not
+# 5 - Create a multiplicationtable() method that creates and displays the multiplication table of a
+# given integer. Then create a multiplyTable() method to display all the tables of
+# multiplying of integers 1, 2, 3, ..., 9.
+# 6 - Create a static listDivisors() method that obtains all the divisors of an integer
+# given in a new list called Ldiv. Create another listDivisorsPrimos() method that obtains
+# all prime divisors of a given integer.
+            
+class calculo():
+
+    def factorial(self, numero):
+        for i in range(2, numero):
+            numero = numero * i
+
+    def sum(self, numero):
+        suma = 0
+        for i in range(numero + 1):
+            suma += i
+        return suma
+
+    def testPrimo(self, numero):
+        variable = True
+        for i in range(2, numero-1):
+            if (numero % i) == 0:
+                variable = False
+
+        if variable == True:
+            print("Es primo")
+        else:
+            print("No es primo")
+
+    def tablaDeMultiplicar(self, numero):
+        lista = []
+        for i in range(1, 11):
+            lista.append(i * numero)
+            print(lista[i - 1], "\t")
+
+    def tablasDeMultiplicar(self):
+        lista = []
+        for i in range (1, 11):
+            lista.append(self.tablaDeMultiplicar(i))
+            print("\n")
+    
+pepe = calculo()
+pepe.tablasDeMultiplicar()
+
+# Obtener la suma de todos los números de una lista
+# Get the sum of all the numbers in a list
+
+lista = []
+suma = 0
+
+while 1:
+    a = input("Ingrese un numero para agregar a la lista: ")
+    if a.isdigit():
+        lista.append(int(a))
+    else:
+        break
+
+for i in lista:
+    suma += i
+
+print("La suma total es: ", suma)
+
+# Obtener el número más alto de una lista
+# Get the highest number in a list
+
+def shellSort(lista):
+    global comparaciones
+    n = len(lista)
+    gap = n // 2
+
+    while gap > 0:
+        for i in range(gap, n):
+            val = lista[i]
+            j = i
+            
+
+            while j >= gap and lista[j-gap] > val:
+                lista[j] = lista[j-gap]
+                j -= gap
+
+            lista[j] = val
+
+        gap = gap // 2
+
+lista = []
+
+while 1:
+    a = input("Ingrese un numero para agregar a la lista: ")
+    if a.isdigit():
+        lista.append(int(a))
+    else:
+        break
+
+shellSort(lista)
+
+print("El numero mas alto es: ", lista[len(lista) - 1])
+
+# Escribir un programa en Python que permita saber si un array es capicua
+# Write a program in Python that allows you to know if an array is capicua
+
+array = []
+i = 0
+esCapicua = "Es capicua"
+
+while 1:
+    a = input("Ingrese un elemento para agregar a la lista o ingrese '0' para finalizar: ")
+    if a != "0":
+        array.append(a)
+    else:
+        break
+
+while esCapicua == "Es capicua" and len(array) > i:
+    if array[i] != array[len(array) - i - 1]:
+        esCapicua = "No es capicua"
+    i += 1
+
+print(esCapicua)
+
+# Escribir un programa Python que permite eliminar elementos repetidos dentro de un
+# arreglo y pasarlos a otro arreglo
+
+# Write a Python program that allows you to eliminate repeated elements within a
+# arrangement and pass them to another arrangement
+
+array = []
+array2 = []
+
+while 1:
+    a = input("Ingrese un elemento para agregar a la lista o ingrese '0' para finalizar: ")
+    if a != "0":
+        array.append(a)
+    else:
+        break
+
+for i in range(0, len(array)):
+    for j in range(0, i):
+        if array[j] == array[i]:
+            array2.append(array[i])
+
+for i in array2:
+    array.remove(i)
+
+# Hacer una funcion en Python que diga si una palabra es palindromo o no
+# Make a function in Python that says if a word is palindrome or not
+
+i = 0
+esCapicua = "Es palindromo"
+
+a = input("Ingrese una palabra: ")
+
+while esCapicua == "Es palindromo" and len(a) > i:
+    if a[i] != a[len(a) - i - 1]:
+        esCapicua = "No es palindromo"
+    i += 1
+
+print(esCapicua)
+
+# Remover item de una tupla
+# Remove item from a tuple
+
+elemento = input("Ingrese el elemento a eliminar de la tupla: ")

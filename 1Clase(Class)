@@ -1,0 +1,384 @@
+from cmath import pi
+
+# Escribe tu primer “Hello World” en Python.
+# Write your first “Hello World” in Python.
+
+print("Hello World")
+
+# Pruebe los diferentes tipos de datos usando la función type()
+# Test different data types using the type() function
+
+print("El tipo de 5 : ", type(5))
+print("El tipo de 5.0 es: ", type(5.0))
+print("El tipo de 5j es: ", type(5j))
+print("El tipo de '5' es: ", type("5"))
+
+# Usa la función input() y haz que Python escriba (“Hola -tu nombre-”)
+# Use the input() function and have Python write (“Hello -your name-”)
+
+nombre = "Facundo"
+
+print("Hola " + nombre)
+
+# Prueba las diferentes operaciones aritméticas (suma, resta, multiplicación, división)
+# mostrando el resultado en pantalla.
+
+# Try different arithmetic operations (addition, subtraction, multiplication, division)
+# showing the result on the screen.
+
+variable1 = 10
+variable2 = 2
+
+print("10 + 2 = ", variable1 + variable2)
+print("10 - 2 = ", variable1 - variable2)
+print("10 * 2 = ", variable1 * variable2)
+print("10 / 2 = ", variable1 / variable2)
+print("10 ^ 2 = ", variable1 ** variable2)
+print("El resultado entero de 10 / 2 es ", variable1 // variable2)
+
+# Sume dos números leídos desde el teclado (usando input()) y muestre el resultado en la pantalla.
+# Add two numbers read from the keyboard (using input()) and display the result on thescreen.
+
+numero1 = int(input("Ingrese el primer numero\n"))
+numero2 = int(input("Ingrese el segundo numero\n"))
+
+suma = numero1 + numero2
+
+print("El resultado de la suma es: ", suma)
+
+# Calcular el promedio de tres números leídos del teclado.
+# Calculate the average of three numbers read from the keyboard.
+
+numero1 = int(input("Ingrese el primer numero\n"))
+numero2 = int(input("Ingrese el segundo numero\n"))
+numero3 = int(input("Ingrese el tercer numero\n"))
+
+promedio = (numero1 + numero2 + numero3) / 3
+print("El promedio es: ", promedio)
+
+# Escriba un programa en Python que acepte el radio de un círculo del usuario y calcule el área.
+# Write a Python program that accepts the radius of a circle from the user and calculates the area.
+
+radio = int(input("Ingrese el radio de la circunferencia\n"))
+
+area = radio ** 2 * pi
+
+print("El area es: ", area)
+
+# Escriba un programa en Python que acepte la longitud y la altura de un rectángulo del
+# usuario y calcule el área y el perímetro.
+
+# Write a Python program that accepts the length and height of a rectangle in the
+# user and calculate the area and perimeter.
+
+lado = int(input("Ingrese el largo del lado\n"))
+altura = int(input("Ingrese la altura\n"))
+
+perimetro = lado * 2 + altura * 2
+area = lado * altura
+
+print(f'{perimetro = }, {area = }')
+
+# Escriba un programa en Python que verifique si un número es mayor, igual o menor que cero.
+# Write a Python program that checks if a number is greater than, equal to, or less than zero.
+
+numero1 = int(input("Ingrese un numero\n"))
+
+if numero1 < 0:
+    print("El numero es menor a cero")
+elif numero1 > 0:
+    print("El numero es mayor a cero")
+else:
+    print("El numero es igual a cero")
+
+# Escribir un programa en Python que permita leer dos números del teclado (deben ser
+# diferentes) y nos muestre en pantalla cuál de ellos es el mayor.
+
+# Write a program in Python that allows reading two numbers from the keyboard (they must be
+# different) and show us on the screen which of them is the largest.
+    
+numero1 = int(input("Ingrese el primer numero\n"))
+numero2 = int(input("Ingrese el segundo numero\n"))
+while numero1 == numero2:
+    numero2 = int(input("El segundo numero debe ser diferente al primero\n"))
+
+if numero1 < numero2:
+    print("El numero ", numero2, " es mayor")
+else:
+    print("El numero ", numero1, " es mayor")
+
+# Determinar si un estudiante aprueba o reprueba un curso, sabiendo que aprobará si su
+# promedio de tres notas (valores enteros del 1 al 10) es mayor o igual a 6; fallar de otra
+# manera.
+
+# Determine whether a student passes or fails a course, knowing that they will pass if their
+# average of three grades (integer values ​​from 1 to 10) is greater than or equal to 6; fail from another
+# manner.
+    
+nota1 = int(input("Ingrese la primera nota\n"))
+nota2 = int(input("Ingrese la segunda nota\n"))
+nota3 = int(input("Ingrese la tercera nota\n"))
+
+promedio = (nota1 + nota2 + nota3) / 3
+
+if promedio >= 6:
+    print("Aprobo")
+else:
+    print("Desaprobo")
+
+# Escribe un programa en Python que nos diga si un número ingresado en el teclado es par o impar.
+# Write a Python program that tells us if a number entered on the keyboard is even. or odd.
+    
+numero = int(input("Ingrese un numero\n"))
+
+resto = numero % 2
+
+if resto == 0:
+    print("El numero es par")
+else:
+    print("El numero es impar")
+
+# Escribe un programa en Python que nos diga cuánto pagará un cliente en una tienda que
+# da un descuento de $20 a los clientes que gastan más de $200 y compran más de 2
+# artículos.
+
+# Write a Python program that tells us how much a customer will pay at a store that
+# gives a $20 discount to customers who spend more than $200 and purchase more than 2
+# articles.
+    
+compra = 1
+valorTotal = 0
+cantidadDeArticulos = -1
+
+while compra != 0:
+    compra = int(input("Ingrese valor de compra\n"))
+    valorTotal += compra
+    cantidadDeArticulos += 1
+
+if valorTotal > 200 and cantidadDeArticulos > 2:
+    valorTotal -= 20
+
+print("Valor a pagar: ", valorTotal, "\nCantidad de productos: ", cantidadDeArticulos)
+
+# Escribir un programa en Python que nos diga cuánto pagará un cliente en una tienda que
+# da un 25% de descuento a los clientes que gastan más de $500 o compran más de 3
+# artículos.
+
+# Write a program in Python that tells us how much a customer will pay in a store that
+# gives a 25% discount to customers who spend more than $500 or buy more than 3
+# articles.
+
+compra = 1
+valorTotal = 0
+cantidadDeArticulos = -1
+
+while compra != 0:
+    compra = int(input("Ingrese valor de compra\n"))
+    valorTotal += compra
+    cantidadDeArticulos += 1
+
+if valorTotal > 500 or cantidadDeArticulos > 3:
+    valorTotal = valorTotal * 3 / 4
+
+print("Valor a pagar: ", valorTotal, "\nCantidad de productos: ", cantidadDeArticulos)
+
+# Escriba un programa en Python donde el usuario elija una opción (sumar, restar, multiplicar,
+# dividir) e insertar dos números. El programa realizará la operación seleccionada y mostrará
+# el resultado.
+
+# Write a Python program where the user chooses an option (add, subtract, multiply,
+# divide) and insert two numbers. The program will perform the selected operation and display
+# the result.
+
+operacion = input("Ingrese suma, resta, multiplicacion o division\n")
+numero8 = int(input("Ingrese el primer numero\n"))
+numero9 = int(input("Ingrese el segundo numero\n"))
+
+if operacion == "suma":
+    print(numero8 + numero9)
+elif operacion == "resta":
+    print(numero8 - numero9)
+elif operacion == "multiplicacion":
+    print(numero8 * numero9)
+elif operacion == "division":
+    print(numero8 / numero9)
+else:
+    print("Operacion no valida")
+
+# Escribe una función de Python que una dos textos en uno.
+# Write a Python function that joins two texts into one.
+    
+texto1 = input("Primer texto\n")
+texto2 = input("Segundo texto\n")
+
+print(texto1 + " " + texto2)
+
+# Escriba una función de Python que agregue 2 números diferentes y devuelva el número.
+# Write a Python function that adds 2 different numbers and returns the number.
+
+numero1 = input("Primer numero\n")
+numero2 = input("Segundo numero\n")
+
+print(int(numero1 + numero2))
+
+# Escriba una función de Python para convertir Celsuis a Kelvin y mostrarla.
+# Write a Python function to convert Celsuis to Kelvin and display it.
+
+celsius = input("Ingrese grados celsius\n")
+
+kelvin = celsius + 273.15
+
+print(kelvin)
+
+# Escriba una función de Python para convertir Celsuis a Fahrenheit y mostrarla.
+# Write a Python function to convert Celsuis to Fahrenheit and display it.
+
+celsius1 = input("Ingrese grados celsius\n")
+
+fahrenheit = (celsius1 * 9/5) + 32
+
+print(fahrenheit)
+
+# Cree un programa en Python (usando las dos funciones anteriores) que convierta
+# cualquier temperatura en Celsius a Kelvin o Fahrenheit. Que el usuario decida.
+
+# Create a Python program (using the two functions above) that converts
+# any temperature in Celsius to Kelvin or Fahrenheit. Let the user decide.
+
+opcion = input("Ingrese 1 para pasar de celsius a kelvin, sino otra tecla\n")
+celsius2 = input("Ingrese grados celsius\n")
+
+if opcion == 1:
+    resu = celsius2 + 273.15
+else:
+    resu = (celsius2 * 9/5) + 32
+
+# Escribe una función de Python que verifique si un número es impar o no.
+# Write a Python function that checks whether a number is odd or not.
+    
+numero3 = int(input("Numero\n"))
+
+resto = numero3 % 2
+if resto == 0:
+    print("Es par")
+else:
+    print("Es impar")
+
+# Escriba una función de Python que permita la suma de todos los números naturales
+# hasta el número elegido.
+
+# Write a Python function that allows the sum of all natural numbers
+# up to the chosen number.
+    
+valorInicial = 0
+
+valorFinal = input("Ingrese un numero\n")
+
+for contador in range (0, valorFinal):
+    valorInicial += contador
+
+# Escriba una función de Python que le permita al usuario ingresar tantos números como
+# desee y luego calcule el promedio.
+
+# Write a Python function that allows the user to enter as many numbers as
+# you want and then calculate the average.
+    
+numero4 = 1
+promedio = 0
+cantidadDeNumeros = -1
+
+while numero4 != 0:
+    numero4 = int(input("Ingrese valor de compra\n"))
+    promedio += numero4
+    cantidadDeNumeros += 1
+
+promedio = promedio / cantidadDeNumeros
+
+print(promedio)
+
+# Escribe una función de Python para encontrar el máximo de dos números.
+# Write a Python function to find the maximum of two numbers.
+
+numero5 = int(input("Primer numero\n"))
+numero6 = int(input("Segundo numero\n"))
+
+if numero5 < numero6:
+    print("El numero " + numero3 + "es mayor")
+elif numero5 > numero6:
+    print("El numero " + numero2 + "es mayor")
+else:
+    print("Ambos numeros son iguales, no tenias que ingresar numeros iguales")
+
+# Escriba una función de Python que tome un número como parámetro y verifique si
+# el número es primo o no.
+
+# Write a Python function that takes a number as a parameter and checks if
+# The number is prime or not.
+
+variable = True
+
+numero7 = int(input("Numero\n"))
+
+for i in range(2, numero7-1):
+    if (numero7 % i) == 0:
+        variable = False
+
+if variable == True:
+    print("Es primo")
+else:
+    print("No es primo")
+
+# Escribe una función de Python para encontrar el máximo de tres números.
+# Write a Python function to find the maximum of three numbers.
+    
+numero8 = int(input("Primer numero\n"))
+numero9 = int(input("Segundo numero\n"))
+numero10 = int(input("Tercer numero\n"))
+
+valor = max(numero8, numero8, numero10)
+
+print(valor)
+
+# Escribe una función de Python para verificar si un número es perfecto o no. 
+# Write a Python function to check if a number is perfect or not.
+
+posibleNumeroPerfecto = int(input("Ingrese un numero\n"))
+suma = 0
+
+for i in range(1, posibleNumeroPerfecto - 1):
+    if (posibleNumeroPerfecto % i) == 0:
+        suma += i
+
+if posibleNumeroPerfecto == suma:
+    print("Es un numero perfecto")
+else:
+    print("No es un numero perfecto")
+
+# Escribe una función de Python para calcular el factorial de un número.
+# Write a Python function to calculate the factorial of a number.
+    
+numeroFinal = 0
+
+while numeroFinal < 1:
+    numeroFinal = int(input("Ingrese un numero positivo\n"))
+
+for i in range(2, numeroFinal):
+    numeroFinal = numeroFinal * i
+
+print("El factorial del numero es: ", numeroFinal)
+
+# Escribe una función de Fibonacci
+# Write a Fibonacci function
+
+def fibonacci(numero):
+    if numero < 3:
+        resu = 1
+    else:
+        resu = fibonacci(numero-1) + fibonacci(numero - 2)
+    return resu
+
+fibo = int(input("Ingrese numero\n"))
+
+resultado = fibonacci(fibo)
+
+print("El resultado es: ", resultado)
